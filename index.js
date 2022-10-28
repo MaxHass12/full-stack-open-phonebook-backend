@@ -1,7 +1,7 @@
 const express = require('express');
-const app = express();
+const morgan = require('morgan');
 
-app.use(express.json());
+const app = express();
 
 const PORT = 3001;
 const ONE_MILLION = 1000000;
@@ -29,9 +29,18 @@ let persons = [
   }
 ];
 
+// helper functions
+
 const generateId = () => {
   return Math.floor(Math.random() * ONE_MILLION);
 }
+
+// middleware
+morgan.token('body', req => JSON.stringify(req.body));
+
+app.use(express.json());
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
+// routes
 
 app.get('/info', (request, response) => {
   const info = `<p>Phonebook has info for ${persons.length} people</p>`;
