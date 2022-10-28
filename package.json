@@ -1,0 +1,27 @@
+{
+  "name": "phonebook-backend",
+  "version": "1.0.0",
+  "description": "- Repository for backend server for the phonebook app - Part 3 of the full stack open course",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxHass12/full-stack-open-phonebook-backend.git"
+  },
+  "author": "shwe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxHass12/full-stack-open-phonebook-backend/issues"
+  },
+  "homepage": "https://github.com/MaxHass12/full-stack-open-phonebook-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
