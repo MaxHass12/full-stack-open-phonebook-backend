@@ -1,7 +1,10 @@
-GET http://localhost:3001/api/persons/1
+GET http://localhost:3001/info
 
 ###
-DELETE http://localhost:3001/api/persons/15
+GET http://localhost:3001/api/persons/
+
+###
+GET http://localhost:3001/api/persons/635d8336b0b729947e051d1f
 
 ###
 POST http://localhost:3001/api/persons
@@ -11,3 +14,33 @@ content-type: application/json
   "name": "foo",
   "number": "123"
 }
+
+###
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+  "name": "foo",
+  "number": "123-456789"
+}
+
+###
+PUT http://localhost:3001/api/persons/635eaba228688482718ab4d5
+content-type: application/json
+
+{
+  "name": "updated name 12",
+  "number": "updated number 12"
+}
+
+###
+PUT http://localhost:3001/api/persons/635eaba228688482718ab4d5
+content-type: application/json
+
+{
+  "name": "u",
+  "number": "updated number"
+}
+
+### change to valid id
+DELETE http://localhost:3001/api/persons/635ec20144fefde0c70b3b9c
